@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>PAI - LAB4</title>
+    <title>fishbook</title>
 </head>
 
 <body>

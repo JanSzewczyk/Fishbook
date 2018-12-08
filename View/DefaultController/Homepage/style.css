@@ -1,0 +1,178 @@
+body{
+    background-color: #303030;
+    color: #ffffff;
+}
+
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rectangle
+{
+    width: 960px;
+    margin: 20px;
+}
+
+.square
+{
+    width: 50%;
+    float: left;
+}
+
+#logo
+{
+    float: left;
+    width: 600px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#zegar
+{
+    float: left;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.login
+{
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #006400;
+    float: left;
+    text-align: center;
+}
+.login:hover{
+    background: #005300;
+}
+
+.funnyzone {
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #3095d3;
+    float: left;
+    text-align: center;
+}
+.funnyzone:hover
+{
+    background-color: #2085c2;
+}
+
+.register {
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #28af28 ;
+    float: left;
+    text-align: center;
+}
+.register:hover
+{
+    background-color: #189e17 ;
+}
+
+.aboutme
+{
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #ffc732;
+    float: left;
+    text-align: center;
+}
+.aboutme:hover{
+     background-color: #eeb621;
+ }
+
+.title4
+{
+    margin: 10px;
+    width: 355px;
+    height: 142px;
+    background-color: #ee5a32;
+    float: left;
+}
+
+.title5
+{
+    margin: 10px;
+    width: 420px;
+    height: 244px;
+    background-color: #666666;
+    text-align: justify;
+    padding: 30px;
+}
+
+.ig
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #000000;
+    float: left;
+}
+.ig:hover{
+    background-color: #111111;
+}
+
+
+.yt
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #d94348;
+    float: left;
+}
+.yt:hover{
+     background-color: #ea5459;
+ }
+
+.fb
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #4668b3;
+    float: left;
+}
+.fb:hover{
+    background-color: #5779c4;
+}
+.gplus
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #d95333;
+    float: left;
+    text-align: center;
+}
+.gplus:hover{
+    background-color: #ea6444;
+}
+.tw
+{
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #3095d3;
+    float: left;
+}
+.tw:hover{
+    background-color: #41a6e4;
+}
+
+.tilelink
+{
+    color: #ffffff;
+    text-decoration: none;
+}

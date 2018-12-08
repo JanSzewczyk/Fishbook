@@ -15,9 +15,17 @@ class DefaultController extends AppController
 
     public function index()
     {
-        $text = 'Hello there 👋';
+        $this->render('index');
+    }
 
-        $this->render('index', ['text' => $text]);
+    public function funny()
+    {
+        $this->render('funny');
+    }
+
+    public function aboutme()
+    {
+        $this->render('aboutme');
     }
 
     public function login()
@@ -26,7 +34,7 @@ class DefaultController extends AppController
         $users = [
             new User('Adrian', 'W','adrian.widlak@pk.edu.pl', 'test'),
             new User('Krzysztof', 'K','krzysztof.krawczyk@pk.edu.pl', 'parostatek'),
-            new User('Jan','Szewczyk', 'jan.szewczyk1997@gmail.com', 'pozdro600')
+            new User('Jan','Szewczyk', 'jan', '123')
         ];
 
         $user = null;
@@ -35,7 +43,7 @@ class DefaultController extends AppController
             //we'll replace this with a query to the database
             foreach ($users as $u) {
                 if ($u->getEmail() === $_POST['email']) {
-                    var_dump($u->getEmail(). ' to: '.$_POST['email']);
+                    //var_dump($u->getEmail(). ' to: '.$_POST['email']);
                     $user = $u;
                     break;
                 }
@@ -51,8 +59,7 @@ class DefaultController extends AppController
                 $_SESSION["id"] = $user->getEmail();
                 $_SESSION["role"] = $user->getRole();
 
-                $url = "http://$_SERVER[HTTP_HOST]/";
-                header("Location: {$url}?page=index");
+                $this->render('index');
                 exit();
             }
         }

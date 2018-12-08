@@ -19,17 +19,17 @@ class Routing
                 'controller' => 'DefaultController',
                 'action' => 'login'
             ],
+            'funny' => [
+                'controller' => 'DefaultController',
+                'action' => 'funny'
+            ],
+            'aboutme' => [
+                'controller' => 'DefaultController',
+                'action' => 'aboutme'
+            ],
             'logout' => [
                 'controller' => 'DefaultController',
                 'action' => 'logout'
-            ],
-            'upload' => [
-                'controller' => 'UploadController',
-                'action' => 'upload'
-            ],
-            'player' => [
-                'controller' => 'PlayerController',
-                'action' => 'player'
             ]
         ];
     }
