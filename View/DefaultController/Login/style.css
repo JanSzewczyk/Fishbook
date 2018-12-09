@@ -1,0 +1,80 @@
+body{
+    background-color: #303030;
+    color: #ffffff;
+
+}
+
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rectangle
+{
+    width: 960px;
+    margin: 20px;
+}
+
+.login
+{
+    width: 960px;
+
+    margin: 20px;
+    float: left;
+}
+
+#logo
+{
+    float: left;
+    width: 600px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#window
+{
+    background-color: rgba(16, 195, 22, 0.64);
+    width: 300px;
+    padding: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+input[type=text],
+input[type=password]
+{
+    width: 300px;
+    background-color: #efefef;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+input[type=submit]
+{
+    color: #ffffff;
+    width: 300px;
+    background-color: #42a004;
+    font-size: 20px;
+    padding: 15px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+input[type=submit]:hover
+{
+    background-color: #319003;
+}
