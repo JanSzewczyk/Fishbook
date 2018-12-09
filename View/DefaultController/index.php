@@ -34,8 +34,8 @@
             </a>
             <div style="clear: both"></div>
 
-            <a href="?page=register" class="tilelink">
-                 <div class="register">
+            <a href="?page=signup" class="tilelink">
+                 <div class="signup">
                      <i class="icon-user-plus"></i></br>Zarejestruj się
                  </div>
             </a>

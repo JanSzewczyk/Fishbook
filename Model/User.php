@@ -17,6 +17,7 @@ class User
         $this->email = $email;
         $this->password = md5($password);
         $this->role = $role;
+        echo $this->password;
     }
 
     public function getName()

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>fishbook</title>
+    <title>fishbook Log in</title>
     <link rel="stylesheet" href="View/DefaultController/Login/style.css" type="text/css"/>
 </head>
 
