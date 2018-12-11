@@ -47,7 +47,7 @@ class DefaultController extends AppController
                 $_SESSION["id"] = $user->getEmail();
                 $_SESSION["role"] = $user->getRole();
 
-                $this->render('index');
+                echo "Zalogowałeś się";
                 exit();
             }
         }

@@ -11,6 +11,7 @@ class SignupController extends AppController
 
     public function signup()
     {
+        $mapper = new UserMapper();
 
         if($this->isPost()){
             $wszystko_ok = true;
@@ -69,14 +70,20 @@ class SignupController extends AppController
                 $wszystko_ok = false;
                 $_SESSION['e_reg'] = "Potwierdź akceptacje regulaminu!";
             }
+
+            //Sprawdzanie w bazie
+            if($mapper->getUser($_POST['email'])->getEmail() == $_POST['email']){
+                $wszystko_ok = false;
+                $_SESSION['e_email'] = "Istnieje już konto przypisane do tego adresu email!";
+            }
+
             if($wszystko_ok == true){
-                //dodanie do bazy danych
-                echo "Udana walidacjia";
-                exit();
+                $mapper->addUser($_POST['name'], $_POST['surname'], $_POST['email'], md5($_POST['password1']));
+                    echo "Udana walidacjia";
+                    exit();
+
             }
         }
-
-
 
         $this->render('signup');
     }

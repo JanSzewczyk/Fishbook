@@ -27,4 +27,20 @@ class UserMapper
             return 'Error: ' . $e->getMessage();
         }
     }
+
+    public function addUser($name, $surname, $email, $password):void {
+        try {
+            $stmt = $this->database->connect()->prepare('INSERT INTO Fb_user VALUES (null, :name, :surname, :email, :password, "user" )');
+
+            $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+            $stmt->bindParam(':surname', $surname, PDO::PARAM_STR);
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+
+            $stmt->execute();
+        }
+        catch(PDOException $e) {
+           echo 'Error: ' . $e->getMessage();
+        }
+    }
 }
