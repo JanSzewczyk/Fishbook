@@ -10,9 +10,7 @@
     <div id="container">
         <div class="rectangle">
             <a href="?page=index" class="tilelink">
-                <div id="logo">
                     <img src="Resources/Homepage/logo.png">
-                </div>
             </a>
             <div style="clear: both"></div>
         </div>

@@ -1,7 +1,13 @@
 body{
     background-color: #303030;
     color: #ffffff;
+}
 
+.error
+{
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #container
@@ -18,22 +24,15 @@ body{
     text-align: center;
 }
 
-.login
+#signupwin
 {
-    width: 960px;
-    margin: 20px;
-    float: left;
-}
-
-#window
-{
-    background-color: rgba(16, 195, 22, 0.64);
+    background-color: #0088cc;
     width: 300px;
     padding: 50px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 input[type=text],
@@ -55,7 +54,7 @@ input[type=submit]
 {
     color: #ffffff;
     width: 300px;
-    background-color: #006400;
+    background-color: #28af28;
     font-size: 20px;
     padding: 15px 10px;
     margin-top: 10px;
@@ -67,5 +66,5 @@ input[type=submit]
 }
 input[type=submit]:hover
 {
-    background-color: #005300;
+    background-color: #189e17;
 }

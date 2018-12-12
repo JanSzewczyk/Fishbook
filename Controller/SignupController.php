@@ -1,6 +1,7 @@
 <?php
 
 require_once("AppController.php");
+require_once(__DIR__.'/../model/UserMapper.php');
 
 class SignupController extends AppController
 {
@@ -12,6 +13,13 @@ class SignupController extends AppController
     public function signup()
     {
         $mapper = new UserMapper();
+
+        //ZABEZPIECZENIE
+        if(isset($_SESSION['zalogowany']) && ($_SESSION['zalogowany'] == true) ){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=usermenu");
+            exit();
+        }
 
         if($this->isPost()){
             $wszystko_ok = true;

@@ -15,6 +15,11 @@ class DefaultController extends AppController
 
     public function index()
     {
+        if(isset($_SESSION['zalogowany']) && ($_SESSION['zalogowany'] == true) ){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=usermenu");
+            exit();
+        }
         $this->render('index');
     }
 
@@ -33,6 +38,12 @@ class DefaultController extends AppController
         $mapper = new UserMapper();
         $user = null;
 
+        if(isset($_SESSION['zalogowany']) && ($_SESSION['zalogowany'] == true) ){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=usermenu");
+            exit();
+        }
+
         if ($this->isPost()) {
             $user = $mapper->getUser($_POST['email']);
 
@@ -44,10 +55,12 @@ class DefaultController extends AppController
             if ($user->getPassword() !== md5($_POST['password'])) {
                 return $this->render('login', ['message' => ['Wrong password']]);
             } else {
+                $_SESSION["zalogowany"] = true; ///
                 $_SESSION["id"] = $user->getEmail();
                 $_SESSION["role"] = $user->getRole();
 
-                echo "Zalogowałeś się";
+                $url = "http://$_SERVER[HTTP_HOST]/";
+                header("Location: {$url}Fishbook/?page=usermenu");
                 exit();
             }
         }
