@@ -46,6 +46,7 @@ class DefaultController extends AppController
 
         if ($this->isPost()) {
             $user = $mapper->getUser($_POST['email']);
+            $wszystko_ok = true;
 
             //var_dump($user);                        //nie dzia la wyświetlanie e maaila
             if(!$user) {
@@ -56,7 +57,7 @@ class DefaultController extends AppController
                 return $this->render('login', ['message' => ['Wrong password']]);
             } else {
                 $_SESSION["zalogowany"] = true; ///
-                $_SESSION["id"] = $user->getEmail();
+                $_SESSION["email"] = $user->getEmail();
                 $_SESSION["role"] = $user->getRole();
 
                 $url = "http://$_SERVER[HTTP_HOST]/";
