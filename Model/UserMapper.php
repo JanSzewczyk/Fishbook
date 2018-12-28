@@ -43,4 +43,17 @@ class UserMapper
            echo 'Error: ' . $e->getMessage();
         }
     }
+
+    public function getAll(
+    ):array {
+        try {
+            $stmt = $this->database->connect()->prepare('SELECT * FROM Fb_user ');
+            $stmt->execute();
+            $user = $stmt->fetchAll();
+            return $user;
+        }
+        catch(PDOException $e) {
+            return 'Error: ' . $e->getMessage();
+        }
+    }
 }

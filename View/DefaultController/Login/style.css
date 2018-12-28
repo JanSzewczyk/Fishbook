@@ -4,6 +4,13 @@ body{
 
 }
 
+.error
+{
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 #container
 {
     width: 1000px;

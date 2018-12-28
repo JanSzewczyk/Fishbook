@@ -48,22 +48,29 @@ class DefaultController extends AppController
             $user = $mapper->getUser($_POST['email']);
             $wszystko_ok = true;
 
-            //var_dump($user);                        //nie dzia la wyświetlanie e maaila
-            if(!$user) {
-                return $this->render('login', ['message' => ['Email not recognized']]);
+            //Sprawdzanie w bazie email
+            if($user->getEmail() != $_POST['email']){
+                $wszystko_ok = false;
+                $_SESSION['e_email'] = "Nie istnieje konto przypisane do tego adresu email!";
+            }else {
+                //Check password
+                if ($user->getPassword() !== md5($_POST['password'])) {
+                    $wszystko_ok = false;
+                    $_SESSION['e_password'] = "Złe hasło!";
+                }
+
+                if($wszystko_ok == true) {
+                    $_SESSION["zalogowany"] = true; ///
+                    $_SESSION["email"] = $user->getEmail();
+                    $_SESSION["role"] = $user->getRole();
+
+                    $url = "http://$_SERVER[HTTP_HOST]/";
+                    header("Location: {$url}Fishbook/?page=usermenu");
+                    exit();
+                }
             }
 
-            if ($user->getPassword() !== md5($_POST['password'])) {
-                return $this->render('login', ['message' => ['Wrong password']]);
-            } else {
-                $_SESSION["zalogowany"] = true; ///
-                $_SESSION["email"] = $user->getEmail();
-                $_SESSION["role"] = $user->getRole();
 
-                $url = "http://$_SERVER[HTTP_HOST]/";
-                header("Location: {$url}Fishbook/?page=usermenu");
-                exit();
-            }
         }
 
         $this->render('login');

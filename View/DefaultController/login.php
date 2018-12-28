@@ -18,13 +18,24 @@
         <div class="login">
             <div id="window">
                 <form action="?page=login" method="POST">
-                    <input name="email" placeholder="email" type="text" required/><br><br>
-                    <input name="password" placeholder="password" type="password" required/><br><br>
-                    <?php if(isset($message)): ?>
-                        <?php foreach($message as $item): ?>
-                            <div><?= $item ?></div>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
+                    <input name="email" placeholder="email" type="text" required/><br>
+                    <?php
+                    if(isset($_SESSION['e_email'])){
+                        echo '<div class="error">'.$_SESSION['e_email'].'</div>';
+                        unset($_SESSION['e_email']);
+                    } else{
+                        echo '<br>';
+                    }
+                    ?>
+                    <input name="password" placeholder="password" type="password" required/><br>
+                    <?php
+                    if(isset($_SESSION['e_password'])){
+                        echo '<div class="error">'.$_SESSION['e_password'].'</div>';
+                        unset($_SESSION['e_password']);
+                    } else{
+                        echo '<br>';
+                    }
+                    ?>
                     <input type="submit" value="Zaloguj"/>
                 </form>
             </div>
