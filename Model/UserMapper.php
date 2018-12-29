@@ -44,6 +44,22 @@ class UserMapper
         }
     }
 
+    public function addExpedition($id, $date, $pleace, $comment = ''):void {
+        try {
+            $stmt = $this->database->connect()->prepare('INSERT INTO Fb_expedition VALUES (null, :id, :date, :pleace, :comment )');
+
+            $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+            $stmt->bindParam(':pleace', $pleace, PDO::PARAM_STR);
+            $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+            $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
+
+            $stmt->execute();
+        }
+        catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
     public function getAll(
     ):array {
         try {

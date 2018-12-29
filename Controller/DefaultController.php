@@ -61,6 +61,7 @@ class DefaultController extends AppController
 
                 if($wszystko_ok == true) {
                     $_SESSION["zalogowany"] = true; ///
+                    $_SESSION["id"] = $user->getId();
                     $_SESSION["email"] = $user->getEmail();
                     $_SESSION["role"] = $user->getRole();
 

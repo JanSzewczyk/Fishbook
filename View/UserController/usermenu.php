@@ -8,8 +8,33 @@
 </head>
 <body>
 
+    <div id="container">
+        <div class="rectangle">
+            <a href="?page=index" class="tilelink">
+                <div id="logo">
+                    <img src="Resources/Homepage/logo.png">
+                </div>
+            </a>
+            <div style="clear: both"></div>
+        </div>
+
+        <div class="square">
+            <div class="info">
+            Jan Szewczyk
+            </div>
+        </div>
+
+        <div class="square">
+        </div>
+        <div style="clear: both"></div>
+
+        <div class="rectangle">2019 &copy fishbook created by Jan Szewczyk </div>
+    </div>
+
+
+
 <?php
-echo "Witaj ".$_SESSION["email"]." rola: ".$_SESSION["role"]." !!!";
+//echo "Witaj ".$_SESSION["email"]." rola: ".$_SESSION["role"]." !!!";
 ?>
 <br/>
 <br/>

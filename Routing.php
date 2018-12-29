@@ -3,6 +3,7 @@
 require_once('Controller/DefaultController.php');
 require_once('Controller/SignupController.php');
 require_once('Controller/UserController.php');
+require_once('Controller/AddController.php');
 
 class Routing
 {
@@ -38,6 +39,10 @@ class Routing
             'usermenu' => [
                 'controller' => 'UserController',
                 'action' => 'usermenu'
+            ],
+            'addexpedition' => [
+                'controller' => 'AddController',
+                'action' => 'addexpedition'
             ]
         ];
     }

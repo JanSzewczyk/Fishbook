@@ -16,7 +16,7 @@ class UserController extends AppController
         $mapper = new UserMapper();
 
         $users = $mapper->getAll();
-        $_SESSION['listUsers'] = $users;
+        $_SESSION['listUsers'] = $users;            // udostępnienie listy użytkowników
 
         //print_r($users);
 

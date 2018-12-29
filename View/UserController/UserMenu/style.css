@@ -1,7 +1,65 @@
+body{
+    background-color: #303030;
+    color: #ffffff;
+}
+
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rectangle
+{
+    width: 960px;
+    margin: 20px;
+}
+
+.square
+{
+    width: 50%;
+    float: left;
+}
+
+#logo
+{
+    float: left;
+    width: 600px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info
+{
+    margin: 10px;
+    width: 480px;
+    height: 142px;
+    background-color: #006400;
+    float: left;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container
 {
-    background-color: white;
+    background-color: black;
     width: 300px;
     padding: 40px 50px;
     margin-left: auto;
