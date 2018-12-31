@@ -12,9 +12,7 @@ class UserMapper
         $this->database = new Database();
     }
 
-    public function getUser(
-        string $email
-    ):User {
+    public function getUser(string $email):User {
         try {
             $stmt = $this->database->connect()->prepare('SELECT * FROM Fb_user WHERE email = :email;');
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
@@ -22,6 +20,47 @@ class UserMapper
 
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
             return new User($user['id'],$user['name'], $user['surname'], $user['email'], $user['password'], $user['role']);
+        }
+        catch(PDOException $e) {
+            return 'Error: ' . $e->getMessage();
+        }
+    }
+
+    public function getFish():array {
+        try {
+            $stmt = $this->database->connect()->prepare('SELECT * FROM Fb_fish;');
+            $stmt->execute();
+
+            $fish = $stmt->fetchAll();
+            return $fish;
+        }
+        catch(PDOException $e) {
+            return 'Error: ' . $e->getMessage();
+        }
+    }
+
+    public function get3Expedition(string $userID):array {
+        try {
+            $stmt = $this->database->connect()->prepare('select * from Fb_expedition where id_user = :userID order by date desc limit 3;');
+            $stmt->bindParam(':userID', $userID, PDO::PARAM_STR);
+            $stmt->execute();
+
+            $exp = $stmt->fetchAll();
+            return $exp;
+        }
+        catch(PDOException $e) {
+            return 'Error: ' . $e->getMessage();
+        }
+    }
+
+    public function getTrophy(string $expedID):array {
+        try {
+            $stmt = $this->database->connect()->prepare('select Fb_trophy.weight, Fb_trophy.length, Fb_fish.name from Fb_trophy, Fb_fish where Fb_fish.id = Fb_trophy.id_fish and Fb_trophy.id_expedition = :expedID ;');
+            $stmt->bindParam(':expedID', $expedID, PDO::PARAM_STR);
+            $stmt->execute();
+
+            $trophy = $stmt->fetchAll();
+            return $trophy;
         }
         catch(PDOException $e) {
             return 'Error: ' . $e->getMessage();
@@ -60,8 +99,7 @@ class UserMapper
         }
     }
 
-    public function getAll(
-    ):array {
+    public function getAll():array {
         try {
             $stmt = $this->database->connect()->prepare('SELECT * FROM Fb_user ');
             $stmt->execute();

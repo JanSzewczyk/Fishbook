@@ -1,0 +1,14 @@
+body{
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.addexpedition
+{
+    margin: 10px;
+    width: 470px;
+    height: 142px;
+    background-color: #3095d3;
+    float: left;
+    text-align: center;
+}

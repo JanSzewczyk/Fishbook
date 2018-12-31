@@ -6,9 +6,12 @@ require_once(__DIR__.'/../model/UserMapper.php');
 
 class AddController extends AppController
 {
+    private $mapper = null;
+
     public function __construct()
     {
         parent::__construct();
+        $this->mapper = new UserMapper();
     }
 
     public function addexpedition():void
@@ -24,12 +27,16 @@ class AddController extends AppController
             $pleace= $_POST['pleace'];
             $comment = $_POST['comment'];
 
-            $mapper = new UserMapper();
-            $mapper->addExpedition($_SESSION['id'],$date, $pleace, $comment);
+            //$mapper = new UserMapper();
+            $this->mapper->addExpedition($_SESSION['id'],$date, $pleace, $comment);
             //TODO mini window with with the message about adding to the database
         }
 
         $this->render("addexpedition");
     }
 
+    public function addtrophy():void
+    {
+
+    }
 }

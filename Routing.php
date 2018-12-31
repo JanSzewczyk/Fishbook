@@ -40,6 +40,10 @@ class Routing
                 'controller' => 'UserController',
                 'action' => 'usermenu'
             ],
+            'expedition' => [
+                'controller' => 'UserController',
+                'action' => 'expedition'
+            ],
             'addexpedition' => [
                 'controller' => 'AddController',
                 'action' => 'addexpedition'

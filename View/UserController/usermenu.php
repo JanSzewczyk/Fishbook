@@ -20,11 +20,52 @@
 
         <div class="square">
             <div class="info">
-            Jan Szewczyk
+            Jan Szewczyk info
             </div>
+            <div style="clear: both"></div>
+
+            <div class="addexpedition">
+                addd <br>
+                expedition
+            </div>
+            <div class="showall">
+                show<br>
+                all
+            </div>
+            <div style="clear: both"></div>
+
+            <div class="showall">
+                show<br>
+                all
+            </div>
+
+
         </div>
 
         <div class="square">
+            <div class="tile1">
+               your adventures
+            </div>
+
+            <?php
+            foreach ($_SESSION['listExped'] as $user){
+                echo "
+            <a href=\"?page=expedition&id_expedition={$user['id']}\" class=\"tilelink\" >
+                <div class=\"date\">
+                    {$user['date']} <br>
+                    {$user['pleace']}
+                </div>
+            </a>
+            ";
+            }
+            unset($_SESSION['listExped']);
+            ?>
+
+            <div class="showall">
+                show<br>
+                all
+            </div>
+
         </div>
         <div style="clear: both"></div>
 
@@ -40,29 +81,6 @@
 <br/>
 <a href="?page=logout">[WYLOGUJ]</a>
 
-
-    <div class="container">
-        <header>
-            elo czy działa to gówno ??
-        </header>
-        <main>
-            <article>
-                <table>
-                    <thead>
-                    <tr><th colspan="2">Rekordy</th></tr>
-                    <tr><th>ID</th></tr><tr><th>Email</th></tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    foreach ($_SESSION['listUsers'] as $user){
-                        echo "<tr><td>{$user['id']} i mail {$user['email']}</td></tr><tr><td>elo</td></tr>";
-                    }
-                    ?>
-                    </tbody>
-                </table>
-            </article>
-        </main>
-    </div>
 
 </body>
 </html>
