@@ -38,8 +38,6 @@
                 show<br>
                 all
             </div>
-
-
         </div>
 
         <div class="square">

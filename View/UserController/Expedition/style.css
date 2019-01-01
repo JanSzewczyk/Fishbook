@@ -3,12 +3,143 @@ body{
     color: #ffffff;
 }
 
-.addexpedition
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rectangle
+{
+    width: 960px;
+    margin: 20px;
+}
+
+.back
 {
     margin: 10px;
-    width: 470px;
+    width: 210px;
+    height: 100px;
+    float: right;
+    font-size: 40px;
+}
+
+.description
+{
+    background-color: #006F0D;
+    width: 960px;
+    margin: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.square
+{
+    width: 50%;
+    float: left;
+}
+
+#logo
+{
+    float: left;
+    width: 600px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info
+{
+    margin: 10px;
+    width: 480px;
+    height: 304px;
+    background-color: #006400;
+    float: left;
+    text-align: center;
+}
+
+.componentinfo
+{
+    margin: 10px;
+    width: 220px;
+    height: 132px;
+    float: left;
+    text-align: center;
+}
+
+.commentinfo
+{
+    margin: 10px;
+    width: 460px;
+    height: 132px;
+    float: left;
+    text-align: center;
+}
+
+.add
+{
+    margin: 10px;
+    width: 230px;
     height: 142px;
     background-color: #3095d3;
     float: left;
     text-align: center;
+}
+.add:hover
+{
+    background-color: #2085c2;
+}
+
+.tile2
+{
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #3095d3;
+    float: left;
+    text-align: center;
+}
+.tile2:hover
+{
+    background-color: #2085c2;
+}
+
+.fish
+{
+    margin: 10px;
+    width: 480px;
+    height: 142px;
+    background-color: #ee5a32;
+    float: left;
+    text-align: center;
+}
+
+.component
+{
+    margin: 10px;
+    width: 100px;
+    height: 122px;
+    float: left;
+    text-align: center;
+}
+
+.delete
+{
+    margin: 10px;
+    width: 100px;
+    height: 122px;
+    background-color: #FB7A13;
+    float: left;
+    text-align: center;
+}
+.delete:hover
+{
+    background-color: #ea6902;
+}
+
+.tilelink
+{
+    color: #ffffff;
+    text-decoration: none;
 }

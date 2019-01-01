@@ -39,6 +39,20 @@ class UserMapper
         }
     }
 
+    public function getExpedition(string $userID):array {
+        try {
+            $stmt = $this->database->connect()->prepare('select * from Fb_expedition where id = :userID ');
+            $stmt->bindParam(':userID', $userID, PDO::PARAM_STR);
+            $stmt->execute();
+
+            $exp = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $exp;
+        }
+        catch(PDOException $e) {
+            return 'Error: ' . $e->getMessage();
+        }
+    }
+
     public function get3Expedition(string $userID):array {
         try {
             $stmt = $this->database->connect()->prepare('select * from Fb_expedition where id_user = :userID order by date desc limit 3;');

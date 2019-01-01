@@ -36,7 +36,9 @@ class UserController extends AppController
         $trophy = $this->mapper->getTrophy($id);
         $_SESSION['listTrophy'] = $trophy;
 
-        print_r($trophy);
+        $expedition = $this->mapper->getExpedition($id);
+        $_SESSION['expedition'] = $expedition;
+
         if(!isset($_SESSION['zalogowany'])){
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}Fishbook/?page=index");
