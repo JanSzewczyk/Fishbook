@@ -16,7 +16,7 @@
                 <img src="Resources/Homepage/logo.png">
             </div>
         </a>
-        <a href="?page=index" class="tilelink">
+        <a href="?page=usermenu" class="tilelink">
             <div class="back">
                 <i class="icon-reply"></i>
                 BACK
@@ -50,7 +50,7 @@
                     </div>
                 ";
             }
-            unset($_SESSION['expedition']);
+            //unset($_SESSION['expedition']);
             ?>
         </div>
         <div style="clear: both"></div>
@@ -68,6 +68,7 @@
     <div class="square">
         <?php
         if(isset($_SESSION['listTrophy'])) {
+            $info = $_SESSION['expedition'];
             foreach ($_SESSION['listTrophy'] as $fish) {
                 echo "
                 <div class=\"fish\">
@@ -83,10 +84,12 @@
                         <i class=\"icon-resize-horizontal\"></i>
                         {$fish['length']} cm
                     </div> 
-                    <div class=\"delete\">
-                        <i class=\"icon-cancel\"></i>
-                        Delete
-                    </div>     
+                    <a href=\"?page=deletetrophy&id_trophy={$fish['id']}&id_expedition={$info['id']}\" class=\"tilelink\">
+                        <div class=\"delete\">
+                            <i class=\"icon-cancel\"></i>
+                            Delete
+                        </div>     
+                    </a>
                     <div style=\"clear: both\"></div>      
                 </div>
             ";
@@ -99,14 +102,6 @@
     <div class="rectangle">2019 &copy fishbook created by Jan Szewczyk </div>
 
 </div>
-
-
-
-
-
-
-
-
 
 </body>
 </html>

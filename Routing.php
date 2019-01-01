@@ -4,6 +4,7 @@ require_once('Controller/DefaultController.php');
 require_once('Controller/SignupController.php');
 require_once('Controller/UserController.php');
 require_once('Controller/AddController.php');
+require_once('Controller/DeleteController.php');
 
 class Routing
 {
@@ -47,6 +48,10 @@ class Routing
             'addexpedition' => [
                 'controller' => 'AddController',
                 'action' => 'addexpedition'
+            ],
+            'deletetrophy' => [
+                'controller' => 'DeleteController',
+                'action' => 'deletetrophy'
             ]
         ];
     }

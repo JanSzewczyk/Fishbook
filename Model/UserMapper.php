@@ -69,7 +69,7 @@ class UserMapper
 
     public function getTrophy(string $expedID):array {
         try {
-            $stmt = $this->database->connect()->prepare('select Fb_trophy.weight, Fb_trophy.length, Fb_fish.name from Fb_trophy, Fb_fish where Fb_fish.id = Fb_trophy.id_fish and Fb_trophy.id_expedition = :expedID ;');
+            $stmt = $this->database->connect()->prepare('select Fb_trophy.id,Fb_trophy.weight, Fb_trophy.length, Fb_fish.name from Fb_trophy, Fb_fish where Fb_fish.id = Fb_trophy.id_fish and Fb_trophy.id_expedition = :expedID ;');
             $stmt->bindParam(':expedID', $expedID, PDO::PARAM_STR);
             $stmt->execute();
 
@@ -122,6 +122,18 @@ class UserMapper
         }
         catch(PDOException $e) {
             return 'Error: ' . $e->getMessage();
+        }
+    }
+
+    public function deleteTrophy($id_trophy):void {
+        try {
+            $stmt = $this->database->connect()->prepare('DELETE FROM Fb_trophy WHERE id = :id_trophy;');
+            $stmt->bindParam(':id_trophy', $id_trophy, PDO::PARAM_STR);
+
+            $stmt->execute();
+        }
+        catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
         }
     }
 }

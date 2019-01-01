@@ -14,7 +14,7 @@ class DeleteController extends AppController
         $this->mapper = new UserMapper();
     }
 
-    public function addexpedition():void
+    public function deletetrophy():void
     {
         if(!isset($_SESSION['zalogowany'])){
             $url = "http://$_SERVER[HTTP_HOST]/";
@@ -22,17 +22,30 @@ class DeleteController extends AppController
             exit();
         }
 
-        /*
-        if($this->isPost()){
-            $date = $_POST['date'];
-            $pleace= $_POST['pleace'];
-            $comment = $_POST['comment'];
+        $id_exped = $_GET['id_expedition'];
+        $id_trophy = $_GET['id_trophy'];
 
-            //$mapper = new UserMapper();
-            $this->mapper->addExpedition($_SESSION['id'],$date, $pleace, $comment);
-            //TODO mini window with with the message about adding to the database
+        $this->mapper->deleteTrophy($id_trophy);
+
+        $url = "http://$_SERVER[HTTP_HOST]/";
+        header("Location: {$url}Fishbook/?page=expedition&id_expedition=".$id_exped);
+        exit();
+    }
+
+
+    public function deletexpedition():void
+    {
+        if(!isset($_SESSION['zalogowany'])){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=index");
+            exit();
         }
-*/
-        $this->render("addexpedition");
+
+        //zrobić usuwanie wyprwa
+
+
+        $url = "http://$_SERVER[HTTP_HOST]/";
+        header("Location: {$url}Fishbook/?page=usermenu");
+        exit();
     }
 }
