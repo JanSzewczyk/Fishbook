@@ -41,6 +41,8 @@ class DeleteController extends AppController
             exit();
         }
 
+        $id_exped = $_GET['id_expedition'];
+        $this->mapper->deleteExpedition($id_exped);
         //zrobić usuwanie wyprwa
 
 

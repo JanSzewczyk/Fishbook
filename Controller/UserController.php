@@ -15,22 +15,28 @@ class UserController extends AppController
 
     public function usermenu():void
     {
-        //$mapper = new UserMapper();
-
-        $exp = $this->mapper->get3Expedition($_SESSION["id"]);
-
-        $_SESSION['listExped'] = $exp;
-
         if(!isset($_SESSION['zalogowany'])){
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}Fishbook/?page=index");
             exit();
         }
+
+        $exp = $this->mapper->get3Expedition($_SESSION["id"]);
+
+        $_SESSION['listExped'] = $exp;
+
+
         $this->render("usermenu");
     }
 
     public function expedition():void
     {
+        if(!isset($_SESSION['zalogowany'])){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=index");
+            exit();
+        }
+
         $id=$_GET['id_expedition'];
 
         $trophy = $this->mapper->getTrophy($id);
@@ -39,11 +45,7 @@ class UserController extends AppController
         $expedition = $this->mapper->getExpedition($id);
         $_SESSION['expedition'] = $expedition;
 
-        if(!isset($_SESSION['zalogowany'])){
-            $url = "http://$_SERVER[HTTP_HOST]/";
-            header("Location: {$url}Fishbook/?page=index");
-            exit();
-        }
+
         $this->render("expedition");
     }
 

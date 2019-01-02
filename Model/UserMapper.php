@@ -125,6 +125,24 @@ class UserMapper
         }
     }
 
+    public function deleteExpedition($id_expedition):void {
+        $fishes = self::getTrophy($id_expedition);
+        foreach ($fishes as $fish){
+            $fish = $fish['id'];
+            self::deleteTrophy($fish);
+        }
+
+        try {
+            $stmt = $this->database->connect()->prepare('DELETE FROM Fb_expedition WHERE id = :id_expedition;');
+            $stmt->bindParam(':id_expedition', $id_expedition, PDO::PARAM_STR);
+
+            $stmt->execute();
+        }
+        catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
     public function deleteTrophy($id_trophy):void {
         try {
             $stmt = $this->database->connect()->prepare('DELETE FROM Fb_trophy WHERE id = :id_trophy;');

@@ -58,10 +58,15 @@
             <i class="icon-plus"></i><br>
             add Fish
         </div>
-        <div class="tile2">
-            <i class="icon-trash"></i><br>
-            Delete Adventure
-        </div>
+        <?php
+        $info = $_SESSION['expedition'];
+        echo "<a href=\"?page=deletexpedition&id_expedition={$info['id']}\" class=\"tilelink\">
+                <div class=\"tile2\">
+                    <i class=\"icon-trash\"></i><br>
+                    Delete Adventure
+                </div>
+            </a>";
+        ?>
         <div style="clear: both"></div>
     </div>
 

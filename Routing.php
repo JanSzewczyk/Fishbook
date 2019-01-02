@@ -52,6 +52,10 @@ class Routing
             'deletetrophy' => [
                 'controller' => 'DeleteController',
                 'action' => 'deletetrophy'
+            ],
+            'deletexpedition' => [
+                'controller' => 'DeleteController',
+                'action' => 'deletexpedition'
             ]
         ];
     }
