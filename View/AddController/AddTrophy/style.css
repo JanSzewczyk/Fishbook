@@ -27,7 +27,7 @@ body{
 #addtrophy
 {
 
-    background-image: url(../../../Resources/Windows/J1.jpg);
+    background-image: url(../../../Resources/Windows/addtrop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -85,4 +85,26 @@ input[type=submit]
 input[type=submit]:hover
 {
     background-color: #189e17;
+}
+
+.back
+{
+    width: 280px;
+    background-color: #28af28;
+    font-size: 20px;
+    padding: 15px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+.back:hover
+{
+    background-color: #189e17;
+}
+
+.tilelink
+{
+    color: #ffffff;
+    text-decoration: none;
 }

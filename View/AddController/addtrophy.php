@@ -51,6 +51,16 @@
 
                 <input type="submit" value="Add fish"/>
             </form>
+            <?php
+
+            echo "
+                <a href=\"?page=expedition&id_expedition={$_SESSION['expedition']['id']}\" class=\"tilelink\">
+                    <div class=\"back\">
+                        back
+                    </div>
+                </a>
+            ";
+            ?>
         </div>
     </div>
 
