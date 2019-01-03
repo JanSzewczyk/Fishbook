@@ -28,7 +28,7 @@ class UserMapper
 
     public function getFish():array {
         try {
-            $stmt = $this->database->connect()->prepare('SELECT * FROM Fb_fish;');
+            $stmt = $this->database->connect()->prepare('SELECT * FROM Fb_fish ORDER BY name ASC;');
             $stmt->execute();
 
             $fish = $stmt->fetchAll();

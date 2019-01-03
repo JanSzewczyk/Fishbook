@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sign up</title>
+    <title>Add expedition</title>
 </head>
 <body>
 
@@ -14,7 +14,7 @@
     Add comment:</br>
     <input name="comment" placeholder="[optional]" type="text"/><br>
 
-    <input type="submit" value="Add fish"/>
+    <input type="submit" value="Add expedition"/>
 </form>
 
 </body>

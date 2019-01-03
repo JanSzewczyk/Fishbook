@@ -1,7 +1,6 @@
 body{
     background-color: #303030;
     color: #ffffff;
-
 }
 
 .error
@@ -25,29 +24,37 @@ body{
     text-align: center;
 }
 
-.login
+#addtrophy
 {
-    width: 960px;
-    margin: 20px;
-    float: left;
-}
 
-#window
-{
-    background-image: url(../../../Resources/Windows/log.jpg);
+    background-image: url(../../../Resources/Windows/J1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-attachment: fixed;
     width: 300px;
     padding: 50px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-input[type=text],
-input[type=password]
+select
+{
+    width: 300px;
+    background-color: #efefef;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+input[type=number]
 {
     width: 300px;
     background-color: #efefef;
@@ -65,7 +72,7 @@ input[type=submit]
 {
     color: #ffffff;
     width: 300px;
-    background-color: #006400;
+    background-color: #28af28;
     font-size: 20px;
     padding: 15px 10px;
     margin-top: 10px;
@@ -77,5 +84,5 @@ input[type=submit]
 }
 input[type=submit]:hover
 {
-    background-color: #005300;
+    background-color: #189e17;
 }

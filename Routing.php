@@ -49,6 +49,10 @@ class Routing
                 'controller' => 'AddController',
                 'action' => 'addexpedition'
             ],
+            'addtrophy' => [
+                'controller' => 'AddController',
+                'action' => 'addtrophy'
+            ],
             'deletetrophy' => [
                 'controller' => 'DeleteController',
                 'action' => 'deletetrophy'

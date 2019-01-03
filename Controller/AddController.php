@@ -37,6 +37,21 @@ class AddController extends AppController
 
     public function addtrophy():void
     {
+        if(!isset($_SESSION['zalogowany'])){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=index");
+            exit();
+        }
 
+        $fishList = $this->mapper->getFish();
+        $_SESSION['fishList'] = $fishList;
+
+        if($this->isPost()){
+
+
+            //TODO mini window with with the message about adding to the database
+        }
+
+        $this->render("addtrophy");
     }
 }
