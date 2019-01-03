@@ -113,6 +113,22 @@ class UserMapper
         }
     }
 
+    public function addTrophy($id_expedition, $id_fish, $length, $weight):void {
+        try {
+            $stmt = $this->database->connect()->prepare('INSERT INTO Fb_trophy VALUES (null, :id_expedition, :id_fish, :length, :weight )');
+
+            $stmt->bindParam(':id_expedition', $id_expedition, PDO::PARAM_STR);
+            $stmt->bindParam(':id_fish', $id_fish, PDO::PARAM_STR);
+            $stmt->bindParam(':length', $length, PDO::PARAM_STR);
+            $stmt->bindParam(':weight', $weight, PDO::PARAM_STR);
+
+            $stmt->execute();
+        }
+        catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
+
     public function getAll():array {
         try {
             $stmt = $this->database->connect()->prepare('SELECT * FROM Fb_user ');

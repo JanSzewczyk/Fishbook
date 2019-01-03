@@ -27,7 +27,6 @@ class AddController extends AppController
             $pleace= $_POST['pleace'];
             $comment = $_POST['comment'];
 
-            //$mapper = new UserMapper();
             $this->mapper->addExpedition($_SESSION['id'],$date, $pleace, $comment);
             //TODO mini window with with the message about adding to the database
         }
@@ -43,12 +42,40 @@ class AddController extends AppController
             exit();
         }
 
+        if(!isset($_SESSION['expedition'])){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=index");
+            exit();
+        }
+
         $fishList = $this->mapper->getFish();
         $_SESSION['fishList'] = $fishList;
 
+        $id_expedition =$_SESSION['expedition']['id'];
+
         if($this->isPost()){
+            $everyOK = true;
+            $id_fish = $_POST['fish'];
+            $length = $_POST['length'];
+            $weight = $_POST['weight'];
 
+            if((int)$length <= 0) {
+                $everyOK = false;
+                $_SESSION['e_length'] = "Provide a positive length!";
+            }
 
+            if((int)$weight <= 0) {
+                $everyOK = false;
+                $_SESSION['e_weight'] = "Provide a positive weight!";
+            }
+
+            if($everyOK == true){
+                $this->mapper->addTrophy($id_expedition, $id_fish, $length, $weight);
+
+                $url = "http://$_SERVER[HTTP_HOST]/";
+                header("Location: {$url}Fishbook/?page=expedition&id_expedition={$id_expedition}");
+                exit();
+            }
             //TODO mini window with with the message about adding to the database
         }
 

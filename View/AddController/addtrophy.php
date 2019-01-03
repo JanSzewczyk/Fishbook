@@ -37,6 +37,18 @@
                 Enter the weight:<br>
                 <input name="weight" placeholder="g" type="number" required/><br>
 
+                <?php
+                if(isset($_SESSION['e_length'])){
+                    echo '<div class="error">'.$_SESSION['e_length'].'</div>';
+                    unset($_SESSION['e_length']);
+                }
+
+                if(isset($_SESSION['e_weight'])){
+                    echo '<div class="error">'.$_SESSION['e_weight'].'</div>';
+                    unset($_SESSION['e_weight']);
+                }
+                ?>
+
                 <input type="submit" value="Add fish"/>
             </form>
         </div>

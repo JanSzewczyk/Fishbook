@@ -50,17 +50,21 @@
                     </div>
                 ";
             }
-            //unset($_SESSION['expedition']);
             ?>
         </div>
         <div style="clear: both"></div>
-        <div class="add">
-            <i class="icon-plus"></i><br>
-            add Fish
-        </div>
+
         <?php
         $info = $_SESSION['expedition'];
-        echo "<a href=\"?page=deletexpedition&id_expedition={$info['id']}\" class=\"tilelink\">
+        echo "
+            <a href=\"?page=addtrophy\" class=\"tilelink\">
+                <div class=\"add\">
+                    <i class=\"icon-plus\"></i><br>
+                    add Fish
+                </div>
+            </a>
+        
+            <a href=\"?page=deletexpedition&id_expedition={$info['id']}\" class=\"tilelink\">
                 <div class=\"tile2\">
                     <i class=\"icon-trash\"></i><br>
                     Delete Adventure
