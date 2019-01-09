@@ -24,7 +24,7 @@
         <div class="square">
             <a href="?page=login" class="tilelink">
                 <div class="login">
-                    <i class="icon-user"></i></br>Zaloguj się
+                    <i class="icon-user"></i></br>Log in
                 </div>
             </a>
             <a href="?page=funny" class="tilelink">
@@ -36,12 +36,12 @@
 
             <a href="?page=signup" class="tilelink">
                  <div class="signup">
-                     <i class="icon-user-plus"></i></br>Zarejestruj się
+                     <i class="icon-user-plus"></i></br>Sign up
                  </div>
             </a>
             <a href="?page=aboutme" class="tilelink">
                  <div class="aboutme">
-                    <i class="icon-heart"></i></br>O projekcie
+                    <i class="icon-heart"></i></br>About me
                 </div>
             </a>
             <div style="clear: both"></div>
@@ -56,8 +56,9 @@
             </a>
             <div style="clear: both"></div>
         </div>
+
         <div class="square">
-            <div class="title5"></div>
+            <div class="wind");></div>
             <a href="http://youtube.com" target="_blank" class="tilelink">
                 <div class="yt">
                     <i class="icon-youtube"></i>

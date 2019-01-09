@@ -15,6 +15,12 @@
                     <img src="Resources/Homepage/logo.png">
                 </div>
             </a>
+
+            <a href="?page=logout" class="tilelink">
+                <div class="logout">
+                    [WYLOGUJ]
+                </div>
+            </a>
             <div style="clear: both"></div>
         </div>
 
@@ -24,10 +30,12 @@
             </div>
             <div style="clear: both"></div>
 
-            <div class="addexpedition">
-                addd <br>
-                expedition
-            </div>
+            <a href="?page=addexpedition" class="tilelink">
+                <div class="addexpedition">
+                    addd <br>
+                    expedition
+                </div>
+            </a>
             <div class="showall">
                 show<br>
                 all
@@ -59,26 +67,13 @@
             unset($_SESSION['listExped']);
             ?>
 
-            <div class="showall">
-                show<br>
-                all
-            </div>
+
 
         </div>
         <div style="clear: both"></div>
 
         <div class="rectangle">2019 &copy fishbook created by Jan Szewczyk </div>
     </div>
-
-
-
-<?php
-//echo "Witaj ".$_SESSION["email"]." rola: ".$_SESSION["role"]." !!!";
-?>
-<br/>
-<br/>
-<a href="?page=logout">[WYLOGUJ]</a>
-
 
 </body>
 </html>

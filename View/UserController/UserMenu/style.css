@@ -32,6 +32,15 @@ body{
     margin-bottom: 10px;
 }
 
+.logout
+{
+    margin: 10px;
+    width: 210px;
+    height: 100px;
+    float: right;
+    font-size: 40px;
+}
+
 .info
 {
     margin: 10px;
@@ -69,7 +78,6 @@ body{
     background-color: #eeb621;
 }
 
-
 .tile1
 {
     font-size: 30px;
@@ -78,9 +86,7 @@ body{
     height: 142px;
     float: left;
     text-align: center;
-
 }
-
 
 .date
 {
@@ -94,7 +100,6 @@ body{
 .date:hover{
     background-color: #dd4921;
 }
-
 
 .tilelink
 {

@@ -28,6 +28,11 @@ class AddController extends AppController
             $comment = $_POST['comment'];
 
             $this->mapper->addExpedition($_SESSION['id'],$date, $pleace, $comment);
+
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=usermenu");
+            exit();
+
             //TODO mini window with with the message about adding to the database
         }
 

@@ -65,7 +65,7 @@
             </a>
         
             <a href=\"?page=deletexpedition&id_expedition={$info['id']}\" class=\"tilelink\">
-                <div class=\"tile2\">
+                <div class=\"deletexped\">
                     <i class=\"icon-trash\"></i><br>
                     Delete Adventure
                 </div>

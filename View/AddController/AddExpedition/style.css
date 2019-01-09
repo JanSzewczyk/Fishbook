@@ -1,0 +1,113 @@
+body{
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.error
+{
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rectangle
+{
+    width: 960px;
+    margin: 20px;
+    text-align: center;
+}
+
+#addexpedition
+{
+    background-image: url(../../../Resources/Windows/addexped.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 300px;
+    padding: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    font-size: 20px;
+}
+
+select
+{
+    width: 300px;
+    background-color: #efefef;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+input[type=text],
+input[type=date]
+{
+    width: 300px;
+    background-color: #efefef;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+input[type=submit]
+{
+    color: #ffffff;
+    width: 300px;
+    background-color: #28af28;
+    font-size: 20px;
+    padding: 15px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+input[type=submit]:hover
+{
+    background-color: #189e17;
+}
+
+.back
+{
+    width: 280px;
+    background-color: #28af28;
+    font-size: 20px;
+    padding: 15px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.back:hover
+{
+    background-color: #189e17;
+}
+
+.tilelink
+{
+    color: #ffffff;
+    text-decoration: none;
+}

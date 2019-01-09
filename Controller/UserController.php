@@ -49,4 +49,23 @@ class UserController extends AppController
         $this->render("expedition");
     }
 
+    public function allexpedition():void
+    {
+        if(!isset($_SESSION['zalogowany'])){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}Fishbook/?page=index");
+            exit();
+        }
+/*
+        $id=$_GET['id_expedition'];
+
+        $trophy = $this->mapper->getTrophy($id);
+        $_SESSION['listTrophy'] = $trophy;
+
+        $expedition = $this->mapper->getExpedition($id);
+        $_SESSION['expedition'] = $expedition;
+*/
+
+        $this->render("allexpedition");
+    }
 }

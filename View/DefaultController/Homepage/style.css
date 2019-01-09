@@ -112,6 +112,17 @@ body{
     padding: 30px;
 }
 
+.wind
+{
+    background-image: url(../../../Resources/Homepage/tools.jpg);
+    background-size: cover;
+    margin: 10px;
+    width: 420px;
+    height: 244px;
+    text-align: justify;
+    padding: 30px;
+}
+
 .ig
 {
     margin: 10px;
