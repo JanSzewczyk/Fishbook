@@ -36,16 +36,15 @@
                     expedition
                 </div>
             </a>
-            <div class="showall">
-                show<br>
-                all
-            </div>
+
+            <a href="?page=allexpedition" class="tilelink">
+                <div class="showall">
+                    show<br>
+                    all
+                </div>
+            </a>
             <div style="clear: both"></div>
 
-            <div class="showall">
-                show<br>
-                all
-            </div>
         </div>
 
         <div class="square">
@@ -66,8 +65,6 @@
             }
             unset($_SESSION['listExped']);
             ?>
-
-
 
         </div>
         <div style="clear: both"></div>

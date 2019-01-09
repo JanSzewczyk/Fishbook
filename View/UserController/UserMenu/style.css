@@ -20,6 +20,7 @@ body{
 .square
 {
     width: 50%;
+    min-height: 430px;
     float: left;
 }
 

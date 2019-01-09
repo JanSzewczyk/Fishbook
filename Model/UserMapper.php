@@ -67,6 +67,20 @@ class UserMapper
         }
     }
 
+    public function getAllExpedition(string $userID):array {
+        try {
+            $stmt = $this->database->connect()->prepare('select * from Fb_expedition where id_user = :userID order by date desc;');
+            $stmt->bindParam(':userID', $userID, PDO::PARAM_STR);
+            $stmt->execute();
+
+            $exp = $stmt->fetchAll();
+            return $exp;
+        }
+        catch(PDOException $e) {
+            return 'Error: ' . $e->getMessage();
+        }
+    }
+
     public function getTrophy(string $expedID):array {
         try {
             $stmt = $this->database->connect()->prepare('select Fb_trophy.id,Fb_trophy.weight, Fb_trophy.length, Fb_fish.name from Fb_trophy, Fb_fish where Fb_fish.id = Fb_trophy.id_fish and Fb_trophy.id_expedition = :expedID ;');

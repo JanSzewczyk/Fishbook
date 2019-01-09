@@ -56,15 +56,10 @@ class UserController extends AppController
             header("Location: {$url}Fishbook/?page=index");
             exit();
         }
-/*
-        $id=$_GET['id_expedition'];
 
-        $trophy = $this->mapper->getTrophy($id);
-        $_SESSION['listTrophy'] = $trophy;
+        $expall = $this->mapper->getAllExpedition($_SESSION["id"]);
 
-        $expedition = $this->mapper->getExpedition($id);
-        $_SESSION['expedition'] = $expedition;
-*/
+        $_SESSION['listAllExped'] = $expall;
 
         $this->render("allexpedition");
     }
