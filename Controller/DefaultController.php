@@ -64,19 +64,14 @@ class DefaultController extends AppController
                     $_SESSION["id"] = $user->getId();
                     $_SESSION["email"] = $user->getEmail();
                     $_SESSION["role"] = $user->getRole();
+                    $_SESSION["name"] = $user->getName()." ".$user->getSurname();
 
-                    if($_SESSION["role"] == "user"){
-                        $url = "http://$_SERVER[HTTP_HOST]/";
-                        header("Location: {$url}Fishbook/?page=usermenu");
-                        exit();
-                    }
-
+                    $url = "http://$_SERVER[HTTP_HOST]/";
+                    header("Location: {$url}Fishbook/?page=usermenu");
+                    exit();
                 }
             }
-
-
         }
-
         $this->render('login');
     }
 

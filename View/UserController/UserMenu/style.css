@@ -52,6 +52,15 @@ body{
     text-align: center;
 }
 
+.componentinfo
+{
+    margin: 10px;
+    width: 220px;
+    height: 124px;
+    float: left;
+    text-align: center;
+}
+
 .addexpedition
 {
     margin: 10px;
@@ -79,27 +88,38 @@ body{
     background-color: #eeb621;
 }
 
-.tile1
+.description
 {
-    font-size: 30px;
-    margin: 10px;
+    background-color: #0f4d0b;
     width: 480px;
-    height: 142px;
-    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     text-align: center;
+    font-size: 30px;
 }
 
 .date
 {
     margin: 10px;
-    width: 230px;
-    height: 142px;
+    width: 480px;
+    height: 124px;
     background-color: #ee5a32;
     float: left;
     text-align: center;
 }
 .date:hover{
     background-color: #dd4921;
+}
+
+.componentdate
+{
+    margin: 10px;
+    width: 220px;
+    height: 104px;
+    float: left;
+    text-align: center;
 }
 
 .tilelink
