@@ -5,6 +5,7 @@ require_once('Controller/SignupController.php');
 require_once('Controller/UserController.php');
 require_once('Controller/AddController.php');
 require_once('Controller/DeleteController.php');
+require_once('Controller/AdminController.php');
 
 class Routing
 {
@@ -64,6 +65,14 @@ class Routing
             'deletexpedition' => [
                 'controller' => 'DeleteController',
                 'action' => 'deletexpedition'
+            ],
+            'adminmenu' => [
+                'controller' => 'AdminController',
+                'action' => 'adminmenu'
+            ],
+            'deleteuser' => [
+                'controller' => 'AdminController',
+                'action' => 'deleteuser'
             ]
         ];
     }

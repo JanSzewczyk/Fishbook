@@ -46,6 +46,11 @@ class UserMapper
             $stmt->execute();
 
             $exp = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if($exp == false){
+                $arr = [];
+                return $arr;
+            }
             return $exp;
         }
         catch(PDOException $e) {
@@ -74,6 +79,11 @@ class UserMapper
             $stmt->execute();
 
             $exp = $stmt->fetchAll();
+
+            if($exp == false){
+                $arr = [];
+                return $arr;
+            }
             return $exp;
         }
         catch(PDOException $e) {

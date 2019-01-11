@@ -1,7 +1,7 @@
 <?php
 
 require_once("AppController.php");
-require_once(__DIR__.'/../model/UserMapper.php');
+require_once(__DIR__.'/../Model/UserMapper.php');
 require_once(__DIR__.'/../Model/User.php');
 
 

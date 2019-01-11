@@ -59,7 +59,7 @@
 .icon-logout:before { content: '\e801'; font-size: 70px; margin-top: 10px; float: right; } /* '' */
 .icon-mail:before { content: '\e802'; font-size: 70px; margin-top: 20px;} /* '' */
 .icon-plus:before { content: '\e803'; font-size: 70px; margin-top: 20px;} /* '' */
-.icon-map:before { content: '\e804'; font-size: 70px; margin-top: 20px;} /* '' */
-.icon-calendar:before { content: '\e805'; font-size: 70px; margin-top: 20px;} /* '' */
+.icon-map:before { content: '\e804'; font-size: 70px; margin-top: 10px;} /* '' */
+.icon-calendar:before { content: '\e805'; font-size: 70px; margin-top: 10px;} /* '' */
 .icon-list-bullet:before { content: '\f0ca'; font-size: 70px; margin-top: 20px;} /* '' */
 .icon-address-book:before { content: '\f2b9'; font-size: 70px; margin-top: 20px;} /* '' */

@@ -43,8 +43,6 @@ class DeleteController extends AppController
 
         $id_exped = $_GET['id_expedition'];
         $this->mapper->deleteExpedition($id_exped);
-        //zrobić usuwanie wyprwa
-
 
         $url = "http://$_SERVER[HTTP_HOST]/";
         header("Location: {$url}Fishbook/?page=usermenu");

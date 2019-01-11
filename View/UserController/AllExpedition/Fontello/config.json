@@ -9,14 +9,14 @@
     {
       "uid": "4c2a3128819fef9548d6f0d38a5e291a",
       "css": "calendar",
-      "code": 59392,
+      "code": 59397,
       "src": "typicons"
     },
     {
-      "uid": "291e2e127efe7a6bc580af6d3ead3771",
-      "css": "location",
-      "code": 61489,
-      "src": "mfglabs"
+      "uid": "87d337fee4866c2c28f6082994ce0f41",
+      "css": "map",
+      "code": 59396,
+      "src": "typicons"
     },
     {
       "uid": "c6be5a58ee4e63a5ec399c2b0d15cf2c",

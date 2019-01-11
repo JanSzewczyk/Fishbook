@@ -26,7 +26,10 @@ body{
 
 #signupwin
 {
-    background-color: #0088cc;
+    background-image: url(../../../Resources/Windows/signup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: 300px;
     padding: 50px;
     margin-right: auto;

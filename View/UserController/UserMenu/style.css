@@ -88,6 +88,19 @@ body{
     background-color: #eeb621;
 }
 
+.adminpanel
+{
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #000000;
+    float: left;
+    text-align: center;
+}
+.adminpanel:hover{
+    background-color: #111111;
+}
+
 .description
 {
     background-color: #0f4d0b;

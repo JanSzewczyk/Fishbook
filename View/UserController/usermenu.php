@@ -60,11 +60,12 @@
             <?php
                 if($_SESSION['role'] == "admin"){
                     echo "
-                        <div class=\"showall\">
-                            <i class=\"icon-address-book\"></i><br>
-                            show<br>
-                            all
-                        </div>
+                        <a href=\"?page=adminmenu\" class=\"tilelink\">
+                            <div class=\"adminpanel\">
+                                <i class=\"icon-address-book\"></i><br>
+                                ADMIN PANEL
+                            </div>
+                        </a>
                     ";
                 }
             ?>
@@ -73,7 +74,7 @@
 
         <div class="square">
             <div class="description">
-               YOUR LAST EXPEDITION
+               YOUR LAST EXPEDITIONS
             </div>
 
             <?php

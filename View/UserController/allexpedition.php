@@ -42,7 +42,7 @@
                             {$expedition['date']} 
                         </div>
                         <div class=\"component\">
-                            <i class=\"icon-location\"></i>
+                            <i class=\"icon-map\"></i>
                              <br>
                             {$expedition['pleace']} 
                         </div>

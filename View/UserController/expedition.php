@@ -40,7 +40,7 @@
                         {$info['date']}
                     </div>
                     <div class=\"componentinfo\">
-                        <i class=\"icon-location\"></i><br>
+                        <i class=\"icon-map\"></i><br>
                         {$info['pleace']}
                     </div>
                     <div style=\"clear: both\"></div>
@@ -90,7 +90,7 @@
                         {$fish['weight']} g
                     </div>
                     <div class=\"component\">
-                        <i class=\"icon-resize-horizontal\"></i>
+                        <i class=\"icon-resize-horizontal-1\"></i>
                         {$fish['length']} cm
                     </div> 
                     <a href=\"?page=deletetrophy&id_trophy={$fish['id']}&id_expedition={$info['id']}\" class=\"tilelink\">
