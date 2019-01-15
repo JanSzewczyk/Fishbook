@@ -47,7 +47,8 @@
             <div style="clear: both"></div>
 
             <div class="title4">
-                <i class="icon-users"></i> Dołącz do NAS
+                <i class="icon-users"></i>
+                Join us!!!
             </div>
             <a href="http://instagram.com" target="_blank" class="tilelink">
                 <div class="ig">

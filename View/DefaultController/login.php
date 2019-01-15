@@ -36,7 +36,7 @@
                         echo '<br>';
                     }
                     ?>
-                    <input type="submit" value="Zaloguj"/>
+                    <input type="submit" value="Log in"/>
                 </form>
             </div>
         </div>

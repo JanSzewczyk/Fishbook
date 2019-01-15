@@ -18,7 +18,7 @@
         <div class="rectangle">
             <div id="signupwin">
                 <form action="?page=signup" method="POST">
-                    <input name="name" placeholder="imie" type="text" required/><br>
+                    <input name="name" placeholder="name" type="text" required/><br>
                     <?php
                     if(isset($_SESSION['e_name'])){
                         echo '<div class="error">'.$_SESSION['e_name'].'</div>';
@@ -27,7 +27,7 @@
                         echo '<br>';
                     }
                     ?>
-                    <input name="surname" placeholder="nazwisko" type="text" required/><br>
+                    <input name="surname" placeholder="surname" type="text" required/><br>
                     <?php
                     if(isset($_SESSION['e_surname'])){
                         echo '<div class="error">'.$_SESSION['e_surname'].'</div>';
@@ -45,7 +45,7 @@
                         echo '<br>';
                     }
                     ?>
-                    <input name="password1" placeholder="hasło" type="password" required/><br>
+                    <input name="password1" placeholder="password" type="password" required/><br>
                     <?php
                     if(isset($_SESSION['e_password'])){
                         echo '<div class="error">'.$_SESSION['e_password'].'</div>';
@@ -54,9 +54,9 @@
                         echo '<br>';
                     }
                     ?>
-                    <input name="password2" placeholder="powtórz hasło" type="password" required/><br><br>
+                    <input name="password2" placeholder="repeat password" type="password" required/><br><br>
                     <label>
-                        <input type="checkbox" name="reg"/>Akceptuję regulamin<br>
+                        <input type="checkbox" name="reg"/>Accept the terms<br>
                     </label>
                     <?php
                     if(isset($_SESSION['e_reg'])){
@@ -66,7 +66,7 @@
                         echo '<br>';
                     }
                     ?>
-                    <input type="submit" value="Resestracja"/>
+                    <input type="submit" value="Sign up"/>
                 </form>
             </div>
         </div>

@@ -48,15 +48,15 @@ class DefaultController extends AppController
             $user = $mapper->getUser($_POST['email']);
             $wszystko_ok = true;
 
-            //Sprawdzanie w bazie email
+
             if($user->getEmail() != $_POST['email']){
                 $wszystko_ok = false;
-                $_SESSION['e_email'] = "Nie istnieje konto przypisane do tego adresu email!";
+                $_SESSION['e_email'] = "Account linked to given email doesn't exist!";
             }else {
                 //Check password
                 if ($user->getPassword() !== md5($_POST['password'])) {
                     $wszystko_ok = false;
-                    $_SESSION['e_password'] = "Złe hasło!";
+                    $_SESSION['e_password'] = "Wrong password!";
                 }
 
                 if($wszystko_ok == true) {

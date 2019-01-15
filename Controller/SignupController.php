@@ -87,9 +87,10 @@ class SignupController extends AppController
 
             if($wszystko_ok == true){
                 $mapper->addUser($_POST['name'], $_POST['surname'], $_POST['email'], md5($_POST['password1']));
-                    echo "Udana walidacjia";
-                    exit();
 
+                    $url = "http://$_SERVER[HTTP_HOST]/";
+                    header("Location: {$url}Fishbook/?page=index");
+                    exit();
             }
         }
 
