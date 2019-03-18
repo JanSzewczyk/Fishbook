@@ -1,4 +1,4 @@
-##### Fishbook 
+# Fishbook 
 
 ## Table of contents
 * [General info](#general-info)
