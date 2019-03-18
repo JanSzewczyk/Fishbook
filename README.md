@@ -1,19 +1,18 @@
-## Fishbook 
+##### Fishbook 
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
 
 
-
-
-Simple internet service for fishermen. 
-A project created for the subject of programming web applications. 
+## General info
+ Simple internet service for fishermen. 
+ A project created for the subject of Programming Web Wpplications. 
 
 
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* PHP
+* HTML 3.0
+* CSS
+* JS
