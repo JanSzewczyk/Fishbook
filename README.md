@@ -6,8 +6,8 @@
 
 
 ## General info
- / Simple internet service for fishermen. 
- / A project created for the subject of Programming Web Wpplications. 
+Simple internet service for fishermen. 
+A project created for the subject of Programming Web Wpplications. 
 
 
 ## Technologies
